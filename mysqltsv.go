@@ -187,6 +187,10 @@ func valueToBytes(v any, cfg *EncoderOptions) ([]byte, error) {
 		return []byte(strconv.FormatInt(int64(v), 10)), nil
 	case uint:
 		return []byte(strconv.FormatUint(uint64(v), 10)), nil
+	case float32:
+		return []byte(strconv.FormatFloat(float64(v), 'f', -1, 32)), nil
+	case float64:
+		return []byte(strconv.FormatFloat(v, 'f', -1, 64)), nil
 	case nil:
 		return nil, nil
 	case bool:

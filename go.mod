@@ -1,3 +1,3 @@
-module github.com/hexon/mysqltsv
+module github.com/rockyprabowo/mysqltsv
 
 go 1.19
